@@ -8,9 +8,16 @@ app.use(express.json())
 
 app.use(cors())
 
-app.use("/ruta1", (req, res) => {
-    res.json({message: "esto es una respuesta"})
+app.use("/customer", (req, res) => {
+    res.json({
+        id: 1,
+        name: "Pepe",
+        description: "software engineer",
+        age: 32
+    })
 })
+
+module.exports = route
 
 app.listen(3000, (err) => {
     if (err) console.log("an error ocurred")
